@@ -2,7 +2,7 @@
 
 
 https://readlearncode.com/cloud/amazon-free-usage-tier-installing-tomcat-7-on-an-ec2-linux-instance/
-
+https://linuxconfig.org/oracle-java-jdk-7-on-ubuntu-linux-source-or-rpm-installation
 https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz
 
 mkdir java
