@@ -35,4 +35,4 @@ sudo update-alternatives --install /usr/bin/java java \ /usr/lib/jvm/jdk1.7.0_80
 
 export CATALINA_HOME=/opt/tomcat/apache-tomcat-7.0.32
 export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_80/jre/bin/java
-
+https://www.liquidweb.com/kb/how-to-install-apache-tomcat-7-on-ubuntu-16-04/
