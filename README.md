@@ -29,3 +29,5 @@ PATH=$JAVA_HOME/bin:$PATH
 export PATH
 
 https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.32/bin/apache-tomcat-7.0.32.tar.gz
+
+sudo update-alternatives --install /usr/bin/java java \ /usr/lib/jvm/jdk1.7.0_80/jre/bin/java 1
