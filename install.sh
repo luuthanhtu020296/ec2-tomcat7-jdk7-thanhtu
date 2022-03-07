@@ -35,7 +35,7 @@ sudo yum install httpd -y
 
 sudo systemctl start httpd.service
 
-sudo chkconfig --add httpd
+ sudo chkconfig --level 345 httpd on
 
 sudo tee /etc/yum.repos.d/mariadb.repo<<EOF
 [mariadb]
@@ -53,13 +53,13 @@ sudo systemctl enable mariadb
 
 sudo yum install amazon-linux-extras –y
 
-sudo amazon-linux-extras enable php7.4
+sudo amazon-linux-extras enable php7.4 -y
 
 sudo yum clean metadata
 
-sudo yum install php php-common php-pear
+sudo yum install php php-common php-pear -y
 
-sudo yum install php-{cgi,curl,mbstring,gd,mysqlnd,gettext,json,xml,fpm,intl,zip}
+sudo yum install php-{cgi,curl,mbstring,gd,mysqlnd,gettext,json,xml,fpm,intl,zip} -y
 
 sudo curl -sS https://getcomposer.org/installer | sudo php
 
