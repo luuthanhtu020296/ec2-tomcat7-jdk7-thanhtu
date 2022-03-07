@@ -46,3 +46,6 @@ sudo crontab -e
 @reboot /opt/tomcat/apache-tomcat-7.0.32/bin/startup.sh
 
 sudo chkconfig httpd on
+
+# fute im
+https://stackoverflow.com/questions/58216549/how-to-retrieve-secret-manager-data-in-buildspec-yaml
