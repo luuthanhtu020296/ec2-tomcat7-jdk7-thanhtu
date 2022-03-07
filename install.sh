@@ -23,11 +23,52 @@ EOF
 
 sudo $CATALINA_HOME/bin/startup.sh
 
-crontab -l > starttc
+sudo crontab -l > starttc
 
-echo "@reboot /opt/tomcat/apache-tomcat-7.0.32/bin/startup.sh" >> starttc
+sudo echo "@reboot /opt/tomcat/apache-tomcat-7.0.32/bin/startup.sh" >> starttc
 
-crontab starttc
+sudo crontab starttc
+
+sudo yum update –y
+
+sudo yum install httpd -y
+
+sudo systemctl start httpd.service
+
+sudo chkconfig --add httpd
+
+sudo tee /etc/yum.repos.d/mariadb.repo<<EOF
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.5/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1
+EOF
+
+sudo yum makecache
+
+sudo yum install MariaDB-server MariaDB-client -y
+
+sudo systemctl enable mariadb
+
+sudo yum install amazon-linux-extras –y
+
+sudo amazon-linux-extras enable php7.4
+
+sudo yum clean metadata
+
+sudo yum install php php-common php-pear
+
+sudo yum install php-{cgi,curl,mbstring,gd,mysqlnd,gettext,json,xml,fpm,intl,zip}
+
+sudo curl -sS https://getcomposer.org/installer | sudo php
+
+sudo mv composer.phar /usr/local/bin/composer
+
+sudo ln -s /usr/local/bin/composer /usr/bin/composer
+
+sudo chmod 777 /var/www/html
 
 rm starttc
+
 
