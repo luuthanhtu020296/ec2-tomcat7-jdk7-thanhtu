@@ -50,4 +50,4 @@ sudo chkconfig httpd on
 # fute im
 https://stackoverflow.com/questions/58216549/how-to-retrieve-secret-manager-data-in-buildspec-yaml
 
-sed -i 's/DocumentRoot "/var/www/html"/DocumentRoot "/var/www/html/apinewsmart/public"/g' /etc/httpd/conf/httpd.conf
+https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
