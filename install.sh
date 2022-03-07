@@ -22,3 +22,12 @@ EOF
 . ~/.bashrc
 
 sudo $CATALINA_HOME/bin/startup.sh
+
+crontab -l > starttc
+
+echo "@reboot /opt/tomcat/apache-tomcat-7.0.32/bin/startup.sh" >> starttc
+
+crontab starttc
+
+sudo rm starttc
+
