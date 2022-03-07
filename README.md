@@ -23,7 +23,7 @@ deb http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe m
 deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse 
 deb http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse 
 deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse
-
+@reboot /`PATH_TO_WHERE_TOMCAT_INSTALLED`/bin/startup.sh
 export JAVA_HOME
 PATH=$JAVA_HOME/bin:$PATH
 export PATH
