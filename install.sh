@@ -35,7 +35,7 @@ sudo yum install httpd -y
 
 sudo systemctl start httpd.service
 
- sudo chkconfig --level 345 httpd on
+sudo chkconfig --level 345 httpd on
 
 sudo tee /etc/yum.repos.d/mariadb.repo<<EOF
 [mariadb]
