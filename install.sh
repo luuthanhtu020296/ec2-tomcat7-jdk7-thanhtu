@@ -12,11 +12,12 @@ wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.32/bin/apache-tomcat-7
 
 sudo mkdir /opt/tomcat
 
-sudo tar -C /opt/tomcat xvzf apache-tomcat-7.0.32.tar.gz
+sudo tar -C /opt/tomcat -xzf apache-tomcat-7.0.32.tar.gz
 
-sudo echo "export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_80/jre/bin/java" > ~/.bashrc
-
-sudo echo "CATALINA_HOME=/opt/tomcat/apache-tomcat-7.0.32" > ~/.bashrc
+sudo tee  ~/.bashrc <<EOF
+export CATALINA_HOME=/opt/tomcat/apache-tomcat-7.0.32
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_80/jre/bin/java
+EOF
 
 . ~/.bashrc
 
