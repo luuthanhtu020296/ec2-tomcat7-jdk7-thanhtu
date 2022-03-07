@@ -39,8 +39,10 @@ https://www.liquidweb.com/kb/how-to-install-apache-tomcat-7-on-ubuntu-16-04/
 
 https://viblo.asia/p/build-a-simple-rest-api-in-php-924lJqrbZPM
 
-# Set auto start tomcat 
+# Set auto start tomcat + apache
 
 sudo crontab -e
 
 @reboot /opt/tomcat/apache-tomcat-7.0.32/bin/startup.sh
+
+sudo chkconfig httpd on
