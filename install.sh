@@ -10,7 +10,7 @@ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.7.0_80/j
 
 wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.32/bin/apache-tomcat-7.0.32.tar.gz
 
-mkdir /opt/tomcat
+sudo mkdir /opt/tomcat
 
 sudo tar -C /opt/tomcat xvzf apache-tomcat-7.0.32.tar.gz
 
