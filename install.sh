@@ -14,10 +14,9 @@ sudo mkdir /opt/tomcat
 
 sudo tar -C /opt/tomcat -xzf apache-tomcat-7.0.32.tar.gz
 
-sudo tee  ~/.bashrc <<EOF
-export CATALINA_HOME=/opt/tomcat/apache-tomcat-7.0.32
-export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_80/jre/bin/java
-EOF
+sudo echo "export CATALINA_HOME=/opt/tomcat/apache-tomcat-7.0.32" > ~/.bashrc
+
+sudo echo "export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_80/jre/bin/java" >> ~/.bashrc
 
 . ~/.bashrc
 
